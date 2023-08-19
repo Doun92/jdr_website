@@ -1,0 +1,15 @@
+{% load static %}
+<!doctype html>
+<html lang="fr-CH">
+  <head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="{% static 'scenario/style.css' %}">
+    <title>Liste des scénarios</title>
+  </head>
+  <body>
+    {%for scenario in liste_scenarios%}
+        <a href="{%url 'detail_scenario' scenario.id%}">{{scenario}}</a>
+    {%endfor%}
+  </body>
+</html>
